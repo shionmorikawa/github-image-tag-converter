@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Tag Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* 基本スタイル */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 180px;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .form-group label {
+      font-size: 1rem;
+      color: #ffffff;
+      margin-right: 5px;
+      min-width: 50px;
+    }
+
+    .form-group input[type="text"] {
+      flex-grow: 1;
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+      max-width: calc(100% - 55px);
+    }
+
+    .form-group input[type="text"]:focus {
+      border-color: #4CAF50;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      width: 60%;
+      margin-top: 10px;
+      align-items: right;
+    }
+
+    button:hover {
+      background-color: rgb(50, 140, 50);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #status {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: rgb(70, 200, 70);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>![Image] -> &lt;img/&gt;</h1>
+
+  <div class="form-group">
+    <label for="width">width</label>
+    <input type="text" id="width" placeholder="500">
+  </div>
+
+  <div class="form-group">
+    <label for="alt">alt</label>
+    <input type="text" id="alt" placeholder="Image">
+  </div>
+
+  <button id="save">Save</button>
+  <p id="status">Settings saved!</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

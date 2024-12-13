@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Image Tag Converter",
+  "version": "1.0.0",
+  "description": "Converts Markdown image syntax to HTML <img> tags in GitHub textboxes.",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
