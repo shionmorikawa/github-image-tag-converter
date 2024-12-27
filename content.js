@@ -17,12 +17,12 @@ function observeTextBoxes() {
     if (!textarea.dataset.imageConverterObserved) {
       textarea.dataset.imageConverterObserved = "true"; // 重複監視を防止
       textarea.addEventListener("input", () => {
-        if (chrome.runtime.lastError) {
-          console.error("Error getting settings:", chrome.runtime.lastError);
-          return;
-        }
-
         chrome.storage.local.get(["width", "alt"], (data) => {
+          if (chrome.runtime.lastError) {
+            console.error("Error getting settings:", chrome.runtime.lastError);
+            return;
+          }
+
           const width = data.width || "500";
           const alt = data.alt || "Image";
 
