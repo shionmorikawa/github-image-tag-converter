@@ -2,6 +2,6 @@
 
 Chrome拡張 "GitHub Image Tag Converter" のソースコードです。
 
-# リンク
+# Links
 
 - [Privacy Policy](./docs/privacy_policy.md)
